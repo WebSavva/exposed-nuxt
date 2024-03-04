@@ -1,32 +1,29 @@
-import { nextTick } from "#imports";
-import { defineNuxtPlugin } from "#app";
+import { nextTick } from '#imports';
+import { defineNuxtPlugin } from '#app';
 
 type OnNuxtReadyCallback = (...args: any[]) => any;
-
-const globalName = "$<%= options.globalName %>";
 
 export default defineNuxtPlugin((nuxtApp) => {
   const nuxtReadyCallbacks: OnNuxtReadyCallback[] = [];
 
-  nuxtApp.hook("app:suspense:resolve", () => {
+  let isNuxtAppMounted = false;
+
+  nuxtApp.hook('app:suspense:resolve', () => {
     nextTick(() => {
-      // @ts-ignore
-      window[globalName]._isMounted = true;
+      isNuxtAppMounted = true;
 
       nuxtReadyCallbacks.forEach((cb) => cb());
     });
   });
 
   // @ts-ignore
-  window[globalName] = nuxtApp;
+  window['$<%= options.globalName %>'] = nuxtApp;
 
   window.onNuxtReady = (cb) => {
-    // @ts-ignore
-    if (window[globalName]._isMounted) {
+    if (isNuxtAppMounted) {
       cb();
-      return;
+    } else {
+      nuxtReadyCallbacks.push(cb);
     }
-
-    nuxtReadyCallbacks.push(cb);
   };
 });

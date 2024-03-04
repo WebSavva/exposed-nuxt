@@ -7,6 +7,7 @@ import {
 
 export interface ModuleOptions {
   globalName?: string;
+  order?: number;
 }
 
 export default defineNuxtModule<ModuleOptions>({
@@ -17,19 +18,24 @@ export default defineNuxtModule<ModuleOptions>({
   defaults: {
     globalName: 'nuxt',
   },
-  setup(options) {
+  setup({ order, globalName }) {
+    const templateOptions = {
+      globalName,
+    };
+
     const resolver = createResolver(import.meta.url);
 
     addPluginTemplate({
       src: resolver.resolve('./runtime/plugin.ts'),
       mode: 'client',
-      options,
+      options: templateOptions,
+      order,
     });
 
     addTypeTemplate({
       src: resolver.resolve('./runtime/types.d.ts'),
       filename: 'exposed-nuxt.d.ts',
-      options,
+      options: templateOptions,
     });
   },
 });

@@ -1,10 +1,18 @@
 import ExposedNuxtModule from '../../../src/module';
 
 export default defineNuxtConfig({
-  modules: [ExposedNuxtModule],
+  modules: [
+    [
+      ExposedNuxtModule,
+      {
+        globalName: 'customNuxt',
+      },
+    ],
+  ],
+
   runtimeConfig: {
     public: {
-      foo: true,
+      isCustomName: true,
     },
   },
 });
