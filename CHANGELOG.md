@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/WebSavva/exposed-nuxt/compare/v1.0.0...v1.0.1) (2024-03-05)
+
+
+### Bug Fixes
+
+* **tests:** Types were fixed slightly in tests ([28cfe0c](https://github.com/WebSavva/exposed-nuxt/commit/28cfe0cfc2f9fe1eff00e22781178ccb297b7d89))
+
 ## 1.0.0 (2024-03-05)
 
 
