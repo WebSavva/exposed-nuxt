@@ -1,0 +1,27 @@
+name: Create release and publish to NPM
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: google-github-actions/release-please-action@v4
+        id: release
+        with:
+          release-type: node
+
+      - uses: actions/checkout@v4
+        if: ${{ steps.release.outputs.release_created }}
+
+      - name: Prepare workflow
+        uses: ./.github/actions/prepare-workflow
+        if: ${{ steps.release.outputs.release_created }}
+
+      - run: echo "Package was published"
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+        if: ${{ steps.release.outputs.release_created }}
