@@ -21,7 +21,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Prepare workflow
-        uses: ./.github/actions/prepare-workflow
+        uses: ./.github/actions/prepare-workflow.yaml
 
       - name: Browser cache
         uses: actions/cache@v3
@@ -43,7 +43,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Prepare workflow
-        uses: ./.github/actions/prepare-workflow
+        uses: ./.github/actions/prepare-workflow.yaml
 
       - name: Run linters
         run: pnpm run lint
