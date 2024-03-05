@@ -1,0 +1,17 @@
+name: Install dependencies and cache it
+description: Action for install dependencies
+
+runs:
+  using: composite
+  steps:
+    - name: Install pnpm
+      uses: pnpm/action-setup@v2
+
+    - name: Use Node.js
+      uses: actions/setup-node@v2
+      with:
+        cache: 'pnpm'
+
+    - name: Install dependencies
+      run: pnpm install
+      shell: bash
