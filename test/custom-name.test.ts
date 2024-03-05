@@ -17,9 +17,11 @@ describe('basic stuff', async () => {
   it('$nuxt is attached to window', async () => {
     const page = await createPage('/');
 
+    // @ts-ignore
     await page.waitForFunction(() => typeof window.$customNuxt !== 'undefined');
 
     const isCustomName = await page.evaluate(
+      // @ts-ignore
       () => window.$customNuxt.$config.public.isCustomName,
     );
 
