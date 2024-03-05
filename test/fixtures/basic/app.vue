@@ -16,7 +16,7 @@ if (process.client) {
     count.value++;
   };
 
-  for (let _ of Array.from(Array(5).keys())) {
+  for (const _ of Array.from(Array(5).keys())) {
     window.onNuxtReady(cb);
   }
 }

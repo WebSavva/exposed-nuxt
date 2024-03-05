@@ -9,10 +9,6 @@ on:
   pull_request:
     branches: [master]
 
-env:
-  FA_NPM_AUTH_TOKEN: ${{ secrets.FA_NPM_AUTH_TOKEN }}
-  TZ: Europe/Moscow
-
 jobs:
   test:
     name: Run tests

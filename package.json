@@ -21,10 +21,10 @@
     "prepare": "nuxt-module-build prepare",
     "build": "pnpm run prepare && nuxt-module-build build",
     "prepack": "pnpm run build",
-    "dev": "nuxi dev playground",
+    "dev:prepare": "nuxt-module-build build --stub && pnpm run prepare && nuxi prepare playground",
     "dev:build": "nuxi build playground",
-    "dev:prepare": "nuxt-module-build build --stub && nuxt-module-build prepare && nuxi prepare playground",
-    "release": "npm run lint && npm run test && npm run prepack && changelogen --release && npm publish && git push --follow-tags",
+    "dev": "nuxi dev playground",
+    "release": "npm run prepack && changelogen --release && npm publish && git push --follow-tags",
     "lint": "eslint .",
     "test": "vitest run",
     "test:watch": "vitest watch"
