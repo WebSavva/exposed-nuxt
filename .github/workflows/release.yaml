@@ -22,17 +22,17 @@ jobs:
         if: ${{ steps.release.outputs.release_created }}
 
       - name: Prepare workflow
-        uses: ./.github/actions/prepare-workflow
         if: ${{ steps.release.outputs.release_created }}
+        uses: ./.github/actions/prepare-workflow
 
       - name: Build module
+        if: ${{ steps.release.outputs.release_created }}
         run: pnpm build
         shell: bash
-        if: ${{ steps.release.outputs.release_created }}
 
       - name: Publich package
-        run: npm publish
+        if: ${{ steps.release.outputs.release_created }}
+        run: ./scripts/release.sh
         shell: bash
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        if: ${{ steps.release.outputs.release_created }}
