@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.1](https://github.com/websavva/exposed-nuxt/compare/v1.2.0...v1.2.1) (2024-03-06)
+
+
+### Bug Fixes
+
+* plugin is stored in .mjs format ([8daef0b](https://github.com/websavva/exposed-nuxt/commit/8daef0b6b863315bde29613ada75e0c1201122f1))
+
 ## [1.2.0](https://github.com/websavva/exposed-nuxt/compare/v1.1.0...v1.2.0) (2024-03-06)
 
 
