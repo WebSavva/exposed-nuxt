@@ -1,10 +1,8 @@
 import { nextTick } from '#imports';
 import { defineNuxtPlugin } from '#app';
 
-type OnNuxtReadyCallback = (...args: any[]) => any;
-
 export default defineNuxtPlugin((nuxtApp) => {
-  const nuxtReadyCallbacks: OnNuxtReadyCallback[] = [];
+  const nuxtReadyCallbacks = [];
 
   let isNuxtAppMounted = false;
 
@@ -16,7 +14,6 @@ export default defineNuxtPlugin((nuxtApp) => {
     });
   });
 
-  // @ts-ignore
   window['<%= options.globalName %>'] = nuxtApp;
 
   window.onNuxtReady = (cb) => {

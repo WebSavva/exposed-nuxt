@@ -26,7 +26,7 @@ export default defineNuxtModule<ModuleOptions>({
     const resolver = createResolver(import.meta.url);
 
     addPluginTemplate({
-      src: resolver.resolve('./runtime/plugin.ts'),
+      src: resolver.resolve('./runtime/plugin.mjs'),
       mode: 'client',
       options: templateOptions,
       order,

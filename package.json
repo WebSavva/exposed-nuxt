@@ -8,7 +8,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/websavva/exposed-nuxt.git"
+    "url": "git+https://github.com/websavva/exposed-nuxt.git"
   },
   "license": "MIT",
   "author": "websavva",
