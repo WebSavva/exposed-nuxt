@@ -25,7 +25,14 @@ jobs:
         uses: ./.github/actions/prepare-workflow
         if: ${{ steps.release.outputs.release_created }}
 
-      - run: echo "Package was published"
+      - name: Build module
+        run: pnpm build
+        shell: bash
+        if: ${{ steps.release.outputs.release_created }}
+
+      - name: Publich package
+        run: npm publish
+        shell: bash
         env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         if: ${{ steps.release.outputs.release_created }}

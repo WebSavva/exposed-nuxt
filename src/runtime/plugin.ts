@@ -17,7 +17,7 @@ export default defineNuxtPlugin((nuxtApp) => {
   });
 
   // @ts-ignore
-  window['$<%= options.globalName %>'] = nuxtApp;
+  window['<%= options.globalName %>'] = nuxtApp;
 
   window.onNuxtReady = (cb) => {
     if (isNuxtAppMounted) {

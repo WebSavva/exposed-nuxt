@@ -1,9 +1,17 @@
 {
   "name": "exposed-nuxt",
   "version": "1.0.1",
-  "description": "Globally exposed NuxtApp in a browser's window",
-  "repository": "",
+  "description": "Globally exposed NuxtApp and onNuxtReady in a browser's window",
+  "keywords": [
+    "nuxt",
+    "module"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/websavva/exposed-nuxt.git"
+  },
   "license": "MIT",
+  "author": "websavva",
   "type": "module",
   "exports": {
     ".": {
