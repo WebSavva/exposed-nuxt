@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/websavva/exposed-nuxt/compare/v1.1.0...v1.2.0) (2024-03-06)
+
+
+### Features
+
+* release.sh script was added ([2a015b2](https://github.com/websavva/exposed-nuxt/commit/2a015b288b08dc1b45da5122cae6f5e85954b515))
+
 ## [1.1.0](https://github.com/websavva/exposed-nuxt/compare/v1.0.1...v1.1.0) (2024-03-06)
 
 
