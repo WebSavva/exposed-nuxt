@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.0](https://github.com/websavva/exposed-nuxt/compare/v1.0.1...v1.1.0) (2024-03-06)
+
+
+### Features
+
+* **lint:** Prettier formatting was added as lint rule ([b8ec335](https://github.com/websavva/exposed-nuxt/commit/b8ec335594eeee74742633b90bfb350e8a61f592))
+* package was prepared for publication on npm ([997808d](https://github.com/websavva/exposed-nuxt/commit/997808d9d73a0e00222c34e71124ddbbef7335ae))
+
 ## [1.0.1](https://github.com/WebSavva/exposed-nuxt/compare/v1.0.0...v1.0.1) (2024-03-05)
 
 ### Bug Fixes
