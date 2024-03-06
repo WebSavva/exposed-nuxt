@@ -1,6 +1,6 @@
 {
   "name": "exposed-nuxt",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Globally exposed NuxtApp and onNuxtReady in a browser's window",
   "keywords": [
     "nuxt",

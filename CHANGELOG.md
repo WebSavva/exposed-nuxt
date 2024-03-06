@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.2](https://github.com/websavva/exposed-nuxt/compare/v1.2.1...v1.2.2) (2024-03-06)
+
+
+### Bug Fixes
+
+* **release:** npm publish logic was moved to Github Actions ([308b6ea](https://github.com/websavva/exposed-nuxt/commit/308b6ea035b7fdab745dd40030cbb8beb3c18df8))
+
 ## [1.2.1](https://github.com/websavva/exposed-nuxt/compare/v1.2.0...v1.2.1) (2024-03-06)
 
 
