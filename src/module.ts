@@ -16,7 +16,7 @@ export default defineNuxtModule<ModuleOptions>({
     configKey: 'exposedNuxt',
   },
   defaults: {
-    globalName: 'nuxt',
+    globalName: '$nuxt',
   },
   setup({ order, globalName }) {
     const templateOptions = {
