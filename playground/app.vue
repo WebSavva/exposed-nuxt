@@ -1,7 +1,5 @@
 <template>
-  <h1>
-    Exposed Nuxt name: {{ globalName }}
-  </h1>
+  <h1>Exposed Nuxt name: {{ globalName }}</h1>
 </template>
 
 <script setup lang="ts">
