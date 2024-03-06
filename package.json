@@ -12,6 +12,10 @@
   },
   "license": "MIT",
   "author": "websavva",
+  "engines": {
+    "node": "20.x",
+    "pnpm": "8.x"
+  },
   "type": "module",
   "exports": {
     ".": {
