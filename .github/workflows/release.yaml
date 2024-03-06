@@ -32,7 +32,12 @@ jobs:
 
       - name: Publich package
         if: ${{ steps.release.outputs.release_created }}
-        run: ./scripts/release.sh
-        shell: bash
+        uses: JS-DevTools/npm-publish@v3
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+          access: public
+
+      - if: ${{ steps.publish.outputs.id }}
+        run: echo $PACKAGE_INFO
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          PACKAGE_INFO: ${{ steps.publish.outputs.id }}

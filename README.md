@@ -13,7 +13,7 @@ window object on client.
 ```sh
 npm i exposed-nuxt # npm
 yarn add exposed-nuxt # yarn
-npm add exposed-nuxt # pnpm
+pnpm add exposed-nuxt # pnpm
 ```
 
 ## Usage
