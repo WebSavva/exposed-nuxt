@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/websavva/exposed-nuxt/compare/v1.2.2...v1.3.0) (2024-03-06)
+
+
+### Features
+
+* Package engines were added ([9b8959c](https://github.com/websavva/exposed-nuxt/commit/9b8959c5989a9b89efdfdf2c09296c478138bf31))
+
 ## [1.2.2](https://github.com/websavva/exposed-nuxt/compare/v1.2.1...v1.2.2) (2024-03-06)
 
 
